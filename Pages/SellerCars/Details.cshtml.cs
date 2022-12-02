@@ -18,45 +18,25 @@ namespace Final_Project_CarBag.Pages.SellerCars
             _context = context;
         }
 
-      public Seller Seller { get; set; } = default!; 
+      public Car Car { get; set; } = default!; 
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
-            if (id == null || _context.sellers == null)
+            if (id == null || _context.cars == null)
             {
                 return NotFound();
             }
 
-            var professor = await _context.sellers.Include(s => s.Cars).FirstOrDefaultAsync(s => s.SellerID == id);
-            if (professor == null)
+            var car = await _context.cars.FirstOrDefaultAsync(m => m.CarID == id);
+            if (car == null)
             {
                 return NotFound();
             }
             else 
             {
-                Seller = Seller;
+                Car = car;
             }
             return Page();
         }
-        public IActionResult OnPostBuyCar(int? id)
-        {
-            if (!ModelState.IsValid)
-            {
-                return Page();
-            }
-
-            // Find the car in the database
-            var Review = _context.cars.FirstOrDefault(c => c.CarID == CarIDToBuy);
-            
-            if (Review != null)
-            {
-                _context.Remove(Car); // "buy" the car
-                _context.SaveChanges();
-            }
-
-            Seller = _context.sellers.Include(s => s.Cars).First(s => s.SellerID == id);
-
-            return Page();
-        }   
     }
 }

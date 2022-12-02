@@ -20,21 +20,21 @@ namespace Final_Project_CarBag.Pages.SellerCars
         }
 
         [BindProperty]
-        public Seller Seller { get; set; } = default!;
+        public Car Car { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
-            if (id == null || _context.sellers == null)
+            if (id == null || _context.cars == null)
             {
                 return NotFound();
             }
 
-            var seller =  await _context.sellers.FirstOrDefaultAsync(m => m.SellerID == id);
-            if (seller == null)
+            var car =  await _context.cars.FirstOrDefaultAsync(m => m.CarID == id);
+            if (car == null)
             {
                 return NotFound();
             }
-            Seller = seller;
+            Car = car;
             return Page();
         }
 
@@ -47,7 +47,7 @@ namespace Final_Project_CarBag.Pages.SellerCars
                 return Page();
             }
 
-            _context.Attach(Seller).State = EntityState.Modified;
+            _context.Attach(Car).State = EntityState.Modified;
 
             try
             {
@@ -55,7 +55,7 @@ namespace Final_Project_CarBag.Pages.SellerCars
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!SellerExists(Seller.SellerID))
+                if (!CarExists(Car.CarID))
                 {
                     return NotFound();
                 }
@@ -68,9 +68,9 @@ namespace Final_Project_CarBag.Pages.SellerCars
             return RedirectToPage("./Index");
         }
 
-        private bool SellerExists(int id)
+        private bool CarExists(int id)
         {
-          return (_context.sellers?.Any(e => e.SellerID == id)).GetValueOrDefault();
+          return (_context.cars?.Any(e => e.CarID == id)).GetValueOrDefault();
         }
     }
 }

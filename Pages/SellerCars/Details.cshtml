@@ -8,40 +8,48 @@
 <h1>Details</h1>
 
 <div>
-    <h4>Seller</h4>
+    <h4>Car</h4>
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Seller.Username)
+            @Html.DisplayNameFor(model => model.Car.Make)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Seller.Username)
+            @Html.DisplayFor(model => model.Car.Make)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Seller.Email)
+            @Html.DisplayNameFor(model => model.Car.Model)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Seller.Email)
+            @Html.DisplayFor(model => model.Car.Model)
         </dd>
-        @foreach(var c in Model.Seller.Cars)
-        {
-            <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => c.Make)
-            </dt>
-            <dd class="col-sm-1">
-                @Html.DisplayFor(model => c.Make)
-            </dd>
-            <dt class="col-sm-9">
-                <form method="post">
-                    <input type="hidden" asp-for="CarIDToBuy" value="@c.CarID" />
-                    <input type="submit" asp-page-handler="BuyCar" asp-route-id="@Model.seller.sellerID" value="Buy car" class="btn btn-danger btn-sm" />
-                </form>
-            </dt>
-        }
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Car.Color)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Car.Color)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Car.Year)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Car.Year)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Car.Mileage)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Car.Mileage)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Car.Price)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Car.Price)
+        </dd>
     </dl>
 </div>
 <div>
-    <a asp-page="./Edit" asp-route-id="@Model.seller?.sellerID">Edit</a> |
+    <a asp-page="./Edit" asp-route-id="@Model.Car?.CarID">Edit</a> |
     <a asp-page="./Index">Back to List</a>
 </div>
-

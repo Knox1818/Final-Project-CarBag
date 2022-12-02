@@ -18,13 +18,13 @@ namespace Final_Project_CarBag.Pages.SellerCars
             _context = context;
         }
 
-        public IList<Seller> Seller { get;set; } = default!;
+        public IList<Car> Car { get;set; } = default!;
 
         public async Task OnGetAsync()
         {
-            if (_context.sellers != null)
+            if (_context.cars != null)
             {
-                Seller = await _context.sellers.ToListAsync();
+                Car = await _context.cars.ToListAsync();
             }
         }
     }

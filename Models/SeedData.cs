@@ -34,7 +34,7 @@ namespace Final_Project_CarBag.Models
                     new Seller{
                         Username= "Jimmy McGill",
                         Address= "220 Mountain View Road, Helena, Montana",
-                        Email= "jimmymcgille@gmail.com",
+                        Email= "jimmymcgill@gmail.com",
                         Cars= new List<Car>{
                             new Car {Make="Lamborghini", Model="Veneno", Color="Silver with red accents", Year=2013, Mileage=200, Price=12000000M}
                         }

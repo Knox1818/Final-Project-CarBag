@@ -24,18 +24,18 @@ namespace Final_Project_CarBag.Pages.SellerCars
         }
 
         [BindProperty]
-        public Seller Seller { get; set; } = default!;
+        public Car Car { get; set; } = default!;
         
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
         {
-          if (!ModelState.IsValid || _context.sellers == null || Seller == null)
+          if (!ModelState.IsValid || _context.cars == null || Car == null)
             {
                 return Page();
             }
 
-            _context.sellers.Add(Seller);
+            _context.cars.Add(Car);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

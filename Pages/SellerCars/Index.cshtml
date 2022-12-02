@@ -14,33 +14,51 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Seller[0].Username)
+                @Html.DisplayNameFor(model => model.Car[0].Make)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Seller[0].Address)
+                @Html.DisplayNameFor(model => model.Car[0].Model)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Seller[0].Email)
+                @Html.DisplayNameFor(model => model.Car[0].Color)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Car[0].Year)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Car[0].Mileage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Car[0].Price)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Seller) {
+@foreach (var item in Model.Car) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Username)
+                @Html.DisplayFor(modelItem => item.Make)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Address)
+                @Html.DisplayFor(modelItem => item.Model)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Email)
+                @Html.DisplayFor(modelItem => item.Color)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.SellerID">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.SellerID">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.SellerID">Delete</a>
+                @Html.DisplayFor(modelItem => item.Year)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mileage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.CarID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.CarID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.CarID">Delete</a>
             </td>
         </tr>
 }

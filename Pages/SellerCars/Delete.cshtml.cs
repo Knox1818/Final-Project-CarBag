@@ -19,40 +19,40 @@ namespace Final_Project_CarBag.Pages.SellerCars
         }
 
         [BindProperty]
-      public Seller Seller { get; set; } = default!;
+      public Car Car { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
-            if (id == null || _context.sellers == null)
+            if (id == null || _context.cars == null)
             {
                 return NotFound();
             }
 
-            var seller = await _context.sellers.FirstOrDefaultAsync(m => m.SellerID == id);
+            var car = await _context.cars.FirstOrDefaultAsync(m => m.CarID == id);
 
-            if (seller == null)
+            if (car == null)
             {
                 return NotFound();
             }
             else 
             {
-                Seller = seller;
+                Car = car;
             }
             return Page();
         }
 
         public async Task<IActionResult> OnPostAsync(int? id)
         {
-            if (id == null || _context.sellers == null)
+            if (id == null || _context.cars == null)
             {
                 return NotFound();
             }
-            var seller = await _context.sellers.FindAsync(id);
+            var car = await _context.cars.FindAsync(id);
 
-            if (seller != null)
+            if (car != null)
             {
-                Seller = seller;
-                _context.sellers.Remove(Seller);
+                Car = car;
+                _context.cars.Remove(Car);
                 await _context.SaveChangesAsync();
             }
 

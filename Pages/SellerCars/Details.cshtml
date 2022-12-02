@@ -1,0 +1,47 @@
+@page
+@model Final_Project_CarBag.Pages.SellerCars.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Seller</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Seller.Username)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Seller.Username)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Seller.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Seller.Email)
+        </dd>
+        @foreach(var c in Model.Seller.Cars)
+        {
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => c.Make)
+            </dt>
+            <dd class="col-sm-1">
+                @Html.DisplayFor(model => c.Make)
+            </dd>
+            <dt class="col-sm-9">
+                <form method="post">
+                    <input type="hidden" asp-for="CarIDToBuy" value="@c.CarID" />
+                    <input type="submit" asp-page-handler="BuyCar" asp-route-id="@Model.seller.sellerID" value="Buy car" class="btn btn-danger btn-sm" />
+                </form>
+            </dt>
+        }
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.seller?.sellerID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
+

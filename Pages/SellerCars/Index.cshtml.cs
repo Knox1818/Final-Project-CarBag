@@ -23,6 +23,7 @@ namespace Final_Project_CarBag.Pages.SellerCars
         [BindProperty(SupportsGet = true)]
         public int PageNum {get; set;} = 1;
         public int PageSize {get; set;} = 10;
+
         [BindProperty(SupportsGet = true)]
         public string CurrentSort {get; set;} = string.Empty;
         public SelectList SortList {get; set;} = default!;
@@ -77,6 +78,7 @@ namespace Final_Project_CarBag.Pages.SellerCars
                         query = query.OrderByDescending(c => c.Price);
                         break;
                 }
+                Car = await query.Skip((PageNum-1)*PageSize).Take(PageSize).ToListAsync();
             }
         }
     }

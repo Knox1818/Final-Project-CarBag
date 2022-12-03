@@ -1,0 +1,15 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to CarBag</h1>
+</div>
+
+<p>Current cars for sale:</p>
+@foreach (var car in Model.Cars)
+{
+    <P> @Html.DisplayFor(modelItem => car.Make) @Html.DisplayFor(modelItem => car.Model), @Html.DisplayFor(modelItem => car.Color), @Html.DisplayFor(modelItem => car.Year), @Html.DisplayFor(modelItem => car.Mileage) miles, @Html.DisplayFor(modelItem => car.Price)</P>
+}

@@ -16343,6 +16343,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/home/Desktop/CIDM 3312/Final-Project-CarBag/Pages/Index.cshtml",
+      "TargetPath": "Pages\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/home/Desktop/CIDM 3312/Final-Project-CarBag/Pages/SellerCars/Index.cshtml",
       "TargetPath": "Pages\\SellerCars\\Index.cshtml",
       "FileKind": "mvc"

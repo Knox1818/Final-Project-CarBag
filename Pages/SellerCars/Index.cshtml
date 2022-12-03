@@ -5,31 +5,79 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Welcome to CarBag</h1>
 
 <p>
-    <a asp-page="Create">Create New</a>
+    <a asp-page="Create">Post a Car to Sell</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Car[0].Make)
+                @{
+
+                    var firstSort = "first_asc";
+                    if (Model.CurrentSort == "first_asc")
+                    {
+                        firstSort = "first_desc";
+                    }
+                }
+                <a asp-page="./Index" asp-route-CurrentSort="@firstSort">@Html.DisplayNameFor(model => model.Car[0].Make)</a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Car[0].Model)
+                @{
+
+                    var SecondSort = "second_asc";
+                    if (Model.CurrentSort == "second_asc")
+                    {
+                        SecondSort = "second_desc";
+                    }
+                }
+                <a asp-page="./Index" asp-route-CurrentSort="@SecondSort">@Html.DisplayNameFor(model => model.Car[0].Model)</a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Car[0].Color)
+                @{
+
+                    var thirdSort = "third_asc";
+                    if (Model.CurrentSort == "third_asc")
+                    {
+                        thirdSort = "third_desc";
+                    }
+                }
+                <a asp-page="./Index" asp-route-CurrentSort="@thirdSort">@Html.DisplayNameFor(model => model.Car[0].Color)</a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Car[0].Year)
+                @{
+
+                    var fourthSort = "fourth_asc";
+                    if (Model.CurrentSort == "fourth_asc")
+                    {
+                        fourthSort = "fourth_desc";
+                    }
+                }
+                <a asp-page="./Index" asp-route-CurrentSort="@fourthSort">@Html.DisplayNameFor(model => model.Car[0].Year)</a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Car[0].Mileage)
+                @{
+
+                    var fifthSort = "fifth_asc";
+                    if (Model.CurrentSort == "fifth_asc")
+                    {
+                        fifthSort = "fifth_desc";
+                    }
+                }
+                <a asp-page="./Index" asp-route-CurrentSort="@fifthSort">@Html.DisplayNameFor(model => model.Car[0].Mileage)</a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Car[0].Price)
+                @{
+
+                    var sixthSort = "sixth_asc";
+                    if (Model.CurrentSort == "sixth_asc")
+                    {
+                        sixthSort = "sixth_desc";
+                    }
+                }
+                <a asp-page="./Index" asp-route-CurrentSort="@sixthSort">@Html.DisplayNameFor(model => model.Car[0].Price)</a>
             </th>
             <th></th>
         </tr>
@@ -56,9 +104,8 @@
                 @Html.DisplayFor(modelItem => item.Price)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.CarID">Edit</a> |
                 <a asp-page="./Details" asp-route-id="@item.CarID">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.CarID">Delete</a>
+                <a asp-page="./Buy" asp-route-id="@item.CarID">Buy</a>
             </td>
         </tr>
 }

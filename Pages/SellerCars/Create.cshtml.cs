@@ -25,6 +25,8 @@ namespace Final_Project_CarBag.Pages.SellerCars
 
         [BindProperty]
         public Car Car { get; set; } = default!;
+        [BindProperty]
+        public Seller Seller {get;set;}= default!;
         
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD

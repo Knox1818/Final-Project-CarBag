@@ -19,28 +19,20 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/home/Desktop/CIDM 3312/Final-Project-CarBag/Pages/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [/Users/home/Desktop/CIDM 3312/Final-Project-CarBag/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/home/Desktop/CIDM 3312/Final-Project-CarBag/Pages/SellerCars/Buy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2VsbGVyQ2Fycy9CdXkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/home/Desktop/CIDM 3312/Final-Project-CarBag/Pages/SellerCars/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2VsbGVyQ2Fycy9DcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/home/Desktop/CIDM 3312/Final-Project-CarBag/Pages/SellerCars/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2VsbGVyQ2Fycy9EZWxldGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [/Users/home/Desktop/CIDM 3312/Final-Project-CarBag/Pages/SellerCars/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2VsbGVyQ2Fycy9EZXRhaWxzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[/Users/home/Desktop/CIDM 3312/Final-Project-CarBag/Pages/SellerCars/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2VsbGVyQ2Fycy9FZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/home/Desktop/CIDM 3312/Final-Project-CarBag/Pages/SellerCars/Index.cshtml]

@@ -18,7 +18,11 @@ namespace Final_Project_CarBag.Pages.SellerCars
             _context = context;
         }
 
-      public Car Car { get; set; } = default!; 
+      public Car Car { get; set; } = default!;
+      public Seller Seller { get; set; } = default!; 
+      [BindProperty]
+      public int CarIDToBuy {get; set;}
+
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -27,7 +31,7 @@ namespace Final_Project_CarBag.Pages.SellerCars
                 return NotFound();
             }
 
-            var car = await _context.cars.FirstOrDefaultAsync(m => m.CarID == id);
+            var car = await _context.cars.Include(c => c.Sellers).FirstOrDefaultAsync(s => s.CarID == id);
             if (car == null)
             {
                 return NotFound();
@@ -37,6 +41,6 @@ namespace Final_Project_CarBag.Pages.SellerCars
                 Car = car;
             }
             return Page();
-        }
+        }    
     }
 }

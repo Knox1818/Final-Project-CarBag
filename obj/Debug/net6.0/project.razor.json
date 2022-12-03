@@ -16318,13 +16318,13 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/home/Desktop/CIDM 3312/Final-Project-CarBag/Pages/_ViewStart.cshtml",
-      "TargetPath": "Pages\\_ViewStart.cshtml",
+      "FilePath": "/Users/home/Desktop/CIDM 3312/Final-Project-CarBag/Pages/SellerCars/Buy.cshtml",
+      "TargetPath": "Pages\\SellerCars\\Buy.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/home/Desktop/CIDM 3312/Final-Project-CarBag/Pages/SellerCars/Delete.cshtml",
-      "TargetPath": "Pages\\SellerCars\\Delete.cshtml",
+      "FilePath": "/Users/home/Desktop/CIDM 3312/Final-Project-CarBag/Pages/_ViewStart.cshtml",
+      "TargetPath": "Pages\\_ViewStart.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -16338,18 +16338,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/home/Desktop/CIDM 3312/Final-Project-CarBag/Pages/SellerCars/Edit.cshtml",
-      "TargetPath": "Pages\\SellerCars\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "/Users/home/Desktop/CIDM 3312/Final-Project-CarBag/Pages/SellerCars/Details.cshtml",
       "TargetPath": "Pages\\SellerCars\\Details.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/Users/home/Desktop/CIDM 3312/Final-Project-CarBag/Pages/Index.cshtml",
-      "TargetPath": "Pages\\Index.cshtml",
       "FileKind": "mvc"
     },
     {

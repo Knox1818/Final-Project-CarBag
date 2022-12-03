@@ -12,22 +12,22 @@ a[b-m27ut4s6fn] {
 }
 
 .btn-primary[b-m27ut4s6fn] {
-  color: #fff;
+  color: #000442;
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
 
 .nav-pills .nav-link.active[b-m27ut4s6fn], .nav-pills .show > .nav-link[b-m27ut4s6fn] {
-  color: #fff;
+  color: #000442;
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
 
 .border-top[b-m27ut4s6fn] {
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid #000442;
 }
 .border-bottom[b-m27ut4s6fn] {
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid #000442;
 }
 
 .box-shadow[b-m27ut4s6fn] {

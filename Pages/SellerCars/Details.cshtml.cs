@@ -19,9 +19,7 @@ namespace Final_Project_CarBag.Pages.SellerCars
         }
 
       public Car Car { get; set; } = default!;
-      public Seller Seller { get; set; } = default!; 
-      [BindProperty]
-      public int CarIDToBuy {get; set;}
+      public Seller Seller { get; set; } = default!;
 
 
         public async Task<IActionResult> OnGetAsync(int? id)
@@ -40,7 +38,7 @@ namespace Final_Project_CarBag.Pages.SellerCars
             {
                 Car = car;
             }
-            return Page();
-        }    
+            return Page();   
+        }
     }
 }

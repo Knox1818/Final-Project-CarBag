@@ -27,12 +27,11 @@ namespace Final_Project_CarBag.Pages.SellerCars
         [BindProperty(SupportsGet = true)]
         public string CurrentSort {get; set;} = string.Empty;
         public SelectList SortList {get; set;} = default!;
-
         public async Task OnGetAsync()
         {
             if (_context.cars != null)
             {
-               var query = _context.cars.Select(c => c);
+                var query = _context.cars.Select(c => c);
                 List<SelectListItem> sortItems = new List<SelectListItem> {
                     new SelectListItem { Text = "Make Ascending", Value = "first_asc" },
                     new SelectListItem { Text = "Make Descending", Value = "first_desc"}

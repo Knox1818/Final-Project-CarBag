@@ -17,7 +17,7 @@ namespace FinalProjectCarBag.Migrations
                     SellerID = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Username = table.Column<string>(type: "TEXT", maxLength: 30, nullable: false),
-                    Address = table.Column<string>(type: "TEXT", maxLength: 200, nullable: false),
+                    Location = table.Column<string>(type: "TEXT", maxLength: 200, nullable: false),
                     Email = table.Column<string>(type: "TEXT", maxLength: 30, nullable: false)
                 },
                 constraints: table =>
@@ -36,7 +36,7 @@ namespace FinalProjectCarBag.Migrations
                     Color = table.Column<string>(type: "TEXT", maxLength: 60, nullable: false),
                     Year = table.Column<int>(type: "INTEGER", nullable: false),
                     Mileage = table.Column<int>(type: "INTEGER", nullable: false),
-                    Price = table.Column<decimal>(type: "TEXT", nullable: false),
+                    Price = table.Column<double>(type: "REAL", nullable: false),
                     SellersSellerID = table.Column<int>(type: "INTEGER", nullable: true)
                 },
                 constraints: table =>

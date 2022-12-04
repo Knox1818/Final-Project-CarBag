@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FinalProjectCarBag.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20221202060754_InitialCreate")]
+    [Migration("20221204002659_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -44,8 +44,8 @@ namespace FinalProjectCarBag.Migrations
                         .HasMaxLength(60)
                         .HasColumnType("TEXT");
 
-                    b.Property<decimal>("Price")
-                        .HasColumnType("TEXT");
+                    b.Property<double>("Price")
+                        .HasColumnType("REAL");
 
                     b.Property<int?>("SellersSellerID")
                         .HasColumnType("INTEGER");
@@ -66,14 +66,14 @@ namespace FinalProjectCarBag.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Address")
-                        .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("TEXT");
-
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasMaxLength(30)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Location")
+                        .IsRequired()
+                        .HasMaxLength(200)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Username")

@@ -20,7 +20,7 @@ namespace Final_Project_CarBag.Models
         [Required]
         [Range(0,99999999)]
         [DataType(DataType.Currency)]
-        public decimal Price {get;set;}
+        public double Price {get;set;}
         public Seller? Sellers {get;set;}
     }
 }

@@ -9,7 +9,7 @@ namespace Final_Project_CarBag.Models
         public string? Username {get;set;}
         [StringLength(200, MinimumLength=3)]
         [Required]
-        public string? Address {get;set;}
+        public string? Location {get;set;}
         [StringLength(30, MinimumLength=3)]
         [Required]
         public string? Email {get;set;}

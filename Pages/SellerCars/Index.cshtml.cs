@@ -65,7 +65,7 @@ namespace Final_Project_CarBag.Pages.SellerCars
                     case "fourth_desc":
                         query = query.OrderByDescending(c => c.Year);
                         break;
-                    case "fifht_asc": 
+                    case "fifth_asc": 
                         query = query.OrderBy(c => c.Mileage);
                         break;
                     case "fifth_desc":

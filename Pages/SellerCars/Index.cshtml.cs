@@ -21,6 +21,8 @@ namespace Final_Project_CarBag.Pages.SellerCars
 
         public IList<Car> Car { get;set; } = default!;
         [BindProperty(SupportsGet = true)]
+        public string? SearchString { get; set; }
+        [BindProperty(SupportsGet = true)]
         public int PageNum {get; set;} = 1;
         public int PageSize {get; set;} = 10;
 
@@ -31,6 +33,12 @@ namespace Final_Project_CarBag.Pages.SellerCars
         {
             if (_context.cars != null)
             {
+                var cars = from c in _context.cars
+                select c;
+                if (!string.IsNullOrEmpty(SearchString)){
+                    cars = cars.Where(a => a.Make.Contains(SearchString));
+                }
+                Car = await cars.ToListAsync();
                 var query = _context.cars.Select(c => c);
                 List<SelectListItem> sortItems = new List<SelectListItem> {
                     new SelectListItem { Text = "Make Ascending", Value = "first_asc" },

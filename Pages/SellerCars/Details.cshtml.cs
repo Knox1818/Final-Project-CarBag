@@ -37,6 +37,7 @@ namespace Final_Project_CarBag.Pages.SellerCars
             else 
             {
                 Car = car;
+                Seller = Car.Sellers!;
             }
             return Page();   
         }

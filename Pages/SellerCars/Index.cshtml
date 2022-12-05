@@ -1,4 +1,4 @@
-@page
+@page "{searchString?}"
 @model Final_Project_CarBag.Pages.SellerCars.IndexModel
 
 @{
@@ -26,6 +26,12 @@ a {
 <p>
     <a asp-page="Create">Post a Car to Sell</a>
 </p>
+<form>
+    <p>
+        <input type="text" asp-for="SearchString" />
+        <input type="submit" value="Search" />
+    </p>
+</form>
 <table class="table">
     <thead>
         <tr>

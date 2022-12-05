@@ -38,6 +38,7 @@ namespace Final_Project_CarBag.Pages.SellerCars
             }
 
             _context.cars.Add(Car);
+            _context.sellers.Add(Seller);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

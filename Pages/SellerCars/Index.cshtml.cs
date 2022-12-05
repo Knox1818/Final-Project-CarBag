@@ -36,7 +36,7 @@ namespace Final_Project_CarBag.Pages.SellerCars
                 var cars = from c in _context.cars
                 select c;
                 if (!string.IsNullOrEmpty(SearchString)){
-                    cars = cars.Where(a => a.Make.Contains(SearchString));
+                    cars = cars.Where(s => s.Make.Contains(SearchString));
                 }
                 Car = await cars.ToListAsync();
                 var query = _context.cars.Select(c => c);

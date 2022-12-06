@@ -36,10 +36,12 @@ namespace Final_Project_CarBag.Pages.SellerCars
                 var cars = from c in _context.cars
                 select c;
                 if (!string.IsNullOrEmpty(SearchString)){
-                    cars = cars.Where(s => s.Make.Contains(SearchString));
+                    cars = cars.Where(c => c.Make!.Contains(SearchString));
+                    cars = cars.Where(c => c.Model!.Contains(SearchString));
+                    cars = cars.Where(c => c.Color!.Contains(SearchString));
                 }
                 Car = await cars.ToListAsync();
-                var query = _context.cars.Select(c => c);
+                var query = cars.Select(c => c);
                 List<SelectListItem> sortItems = new List<SelectListItem> {
                     new SelectListItem { Text = "Make Ascending", Value = "first_asc" },
                     new SelectListItem { Text = "Make Descending", Value = "first_desc"}

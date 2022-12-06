@@ -44,7 +44,7 @@ a {
                         firstSort = "first_desc";
                     }
                 }
-                <a asp-page="./Index" asp-route-PageNum="@(Model.PageNum)" asp-route-CurrentSort="@firstSort">@Html.DisplayNameFor(model => model.Car[0].Make)</a>
+                <a asp-page="./Index" asp-route-PageNum="@(Model.PageNum)"  asp-route-CurrentSort=@firstSort asp-route-CurrentSort="@firstSort">@Html.DisplayNameFor(model => model.Car[0].Make)</a>
             </th>
             <th>
                 @{
@@ -55,7 +55,7 @@ a {
                         secondSort = "second_desc";
                     }
                 }
-                <a asp-page="./Index" asp-route-PageNum="@(Model.PageNum)" asp-route-CurrentSort="@secondSort">@Html.DisplayNameFor(model => model.Car[0].Model)</a>
+                <a asp-page="./Index" asp-route-PageNum="@(Model.PageNum)"  asp-route-CurrentSort="@secondSort">@Html.DisplayNameFor(model => model.Car[0].Model)</a>
             </th>
             <th>
                 @{
@@ -66,7 +66,7 @@ a {
                         thirdSort = "third_desc";
                     }
                 }
-                <a asp-page="./Index" asp-route-PageNum="@(Model.PageNum)" asp-route-CurrentSort="@thirdSort">@Html.DisplayNameFor(model => model.Car[0].Color)</a>
+                <a asp-page="./Index" asp-route-PageNum="@(Model.PageNum)"  asp-route-CurrentSort="@thirdSort">@Html.DisplayNameFor(model => model.Car[0].Color)</a>
             </th>
             <th>
                 @{
@@ -77,7 +77,7 @@ a {
                         fourthSort = "fourth_desc";
                     }
                 }
-                <a asp-page="./Index" asp-route-PageNum="@(Model.PageNum)" asp-route-CurrentSort="@fourthSort">@Html.DisplayNameFor(model => model.Car[0].Year)</a>
+                <a asp-page="./Index" asp-route-PageNum="@(Model.PageNum)"  asp-route-CurrentSort="@fourthSort">@Html.DisplayNameFor(model => model.Car[0].Year)</a>
             </th>
             <th>
                 @{
@@ -88,7 +88,7 @@ a {
                         fifthSort = "fifth_desc";
                     }
                 }
-                <a asp-page="./Index" asp-route-PageNum="@(Model.PageNum)" asp-route-CurrentSort="@fifthSort">@Html.DisplayNameFor(model => model.Car[0].Mileage)</a>
+                <a asp-page="./Index" asp-route-PageNum="@(Model.PageNum)"  asp-route-CurrentSort="@fifthSort">@Html.DisplayNameFor(model => model.Car[0].Mileage)</a>
             </th>
             <th>
                 @{
@@ -99,7 +99,7 @@ a {
                         sixthSort = "sixth_desc";
                     }
                 }
-                <a asp-page="./Index" asp-route-PageNum="@(Model.PageNum)" asp-route-CurrentSort="@sixthSort">@Html.DisplayNameFor(model => model.Car[0].Price)</a>
+                <a asp-page="./Index" asp-route-PageNum="@(Model.PageNum)"  asp-route-CurrentSort="@sixthSort">@Html.DisplayNameFor(model => model.Car[0].Price)</a>
             </th>
             <th></th>
         </tr>
